@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <base target="_blank" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="My name is Gregory Carlin. I am a junior in high school interested in computer science. I design websites and do IT work in Bedford, New York." />
+        <meta name="keywords" content="Gregory,Greg,Carlin" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+        <script src="jquery-1.11.1.min.js"></script>
+        <script src="external.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-51503078-1', 'gregorycarlin.com');
+          ga('send', 'pageview');
+        </script>
+        <script type="text/javascript">
+            function setUp(name) {
+                $(".link-" + name).click(function() {
+                    $("body").scrollTo("#" + name);
+                    $("#" + name).animate({
+                            backgroundColor: "#FFEF00"
+                        }, 300, function() {
+                            $("#" + name).animate({backgroundColor: "#FFF"}, 300);
+                        });
+                });
+            }
+
+            function reverse(text) {
+                var forward = "";
+                for(var i=text.length-1; i>=0; i--) {
+                    forward += text[i];
+                }
+                return forward;
+            }
+
+            $(document).ready(function() {
+                var cats = ["student", "developer", "citizen", "leader", "athlete"];
+                for(var i=0; i<cats.length; i++) {
+                    setUp(cats[i]);
+                }
+
+                $('.button').each(function(index, element) {
+                    var elem = $(element);
+                    var href = elem.attr('href');
+                    elem.attr('href', reverse(href));
+
+                    var span = $('span:not(.fa)', elem);
+                    var html = span.html();
+                    span.html(reverse(html));
+                });
+            });
+        </script>
+        <title>Gregory Carlin</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Gregory Carlin</h1>
+            <span class="line"></span>
+            <img src="head.jpg" width="149" height="148" alt="Portrait." class="portrait" />
+            <span class="line"></span>
+            <ul class="heading">
+                <li><span class="link-student">Student</span></li>
+                <li><span class="link-developer">Developer</span></li>
+                <li><span class="link-citizen">Citizen</span></li>
+                <li><span class="link-leader">Leader</span></li>
+                <li><span class="link-athlete">Athlete</span></li>
+            </ul>
+            <span class="line"></span>
+
+            <noscript>
+                <div class="contents" id="noscript">
+                    <p>
+                        I noticed that you have javascript turned off! Several features of this website require javascript. I highly recommend turning it on.
+                    </p>
+                </div>
+                <span class="line"></span>
+            </noscript>
+
+            <div class="contents">
+                <p itemscope itemtype="http://data-vocabulary.org/Person">
+                    My name is <span itemprop="name">Gregory Carlin</span>.
+                    I live in <span itemprop="address"><span itemprop="locality">Bedford</span>, <span itemprop="region">NY</span></span>.
+                    I am currently a senior at <a href="http://byramhills.org/" rel="nofollow"><span itemprop="affiliation">Byram Hills High School</span></a> interested in majoring in Computer Science.
+                    I began programming in the sixth grade, and haven't stopped since.
+                </p>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents" id="student">
+                <h2>Student</h2>
+                <ul>
+                    <li>
+                        I am enrolled in the <a href="http://www.byramhills.org/curriculum.cfm?subpage=468" rel="nofollow"><strong>Science Research</strong></a> program at my high school where I developed a query cost model for the <a href="http://link.springer.com/chapter/10.1007/978-3-642-14681-7_5" rel="nofollow">weakly dependent subquery optimization</a> of the <a href="http://www.sbql.pl/">Stack-Based Query Language</a> under the guidance of <a href="http://www.ipipan.waw.pl/~subieta/">Dr. Kazimierz Subieta</a>.
+                        The paper can be found <a href="paper.pdf">here</a>.
+                        <ul>
+                          <li>This project was selected for the semifinalist prize in the <a href="https://student.societyforscience.org/intel-sts">Intel Science Talent Search</a>.</li>
+                          <li>You can read about the project  <a href="http://www.allaboutarmonk.com/armonkeducation/intel.html#pgbldblk46">in the local news</a> or on <a href="http://www.byramhills.org/news.cfm?story=542" rel="nofollow">my high school's website</a>.</li>
+                          <li>This project was selected along with five others to be presented to the other Intel semifinalists in New York state at Facebook's Manhattan office. You can also read about this event in the local news <a href="http://allaboutarmonk.com/byramhillseducation/scienceresearch.html#pgbldblk68">here</a> and <a href="http://armonk.dailyvoice.com/schools/byram-hills-senior-presents-research-facebook-meeting">here</a> or on <a href="http://www.byramhills.org/news.cfm?story=552" rel="nofollow">my high school's website</a>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        I attended a competitive enrollment program at <strong>Columbia University</strong> in the summer of 2013, where I took the course <a href="http://ce.columbia.edu/high-school/nyc/junior-senior-courses/computer-graphics-through-game-programming" rel="nofollow">&ldquo;Computer Graphics through Game Programming&rdquo;</a>.
+                    </li>
+                    <li>
+                        I attended a three-week summer program at <strong>Stanford University</strong>, where I took a <a href="https://summerinstitutes.stanford.edu/courses/high-school/Computer-Programming" rel="nofollow">course on artificial intelligence</a>. Two peers and I created an <a href="https://github.com/EthanSargent/NeuralNetwork" rel="nofollow">artificial neural network for optical character recognition</a> that achieved a 98% success rate.
+                    </li>
+                    <li>
+                        I am a member of the <a href="http://www.mualphatheta.org/" rel="nofollow"><strong>Mu Alpha Theta</strong></a> math honor society.
+                    </li>
+                    <li>
+                        I am a member of the <strong>World Language Honor Society</strong>.
+                    </li>
+                    <li>
+                        I received the <strong>Brandeis University Book Award for Social Action and Civic Engagement</strong> for service and academic achievement.
+                    </li>
+                    <li>
+                        I am currently a Teaching Assistant for the AP Computer Science class at my high school.
+                    </li>
+                </ul>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents" id="developer">
+                <h2>Developer</h2>
+                <ul>
+                    <li>
+                        I designed, built, and currently maintain and enhance <a href="http://mytrustco.com/"><strong>My Trust Co</strong></a>, a bespoke website dedicated to enabling individuals to organize trusts.
+                        This is an ongoing project that is organized by a local couple.
+                    </li>
+                    <li>
+                        I created <strong>this website</strong> with an original design.
+                    </li>
+                    <li>
+                        I participated in the <a href="http://hackbca.com/"><strong>HackBCA</strong></a> competition with a peer.
+                        We created <a href="http://codium.io/"><strong>Codium</strong></a>, a website designed to allow educators to teach classes of students how to program over long distances via video chat and live collaboration.
+                        We placed in the top 20 and won the best use of the <a href="http://tokbox.com/" rel="nofollow">TokBox API</a>.
+                    </li>
+                    <li>
+                        My team and I won second place at <a href="http://2014f.pennapps.com/"><strong>PennApps X</strong></a>, another hackathon. 
+                        We created <a href="http://challengepost.com/software/magic-board"><strong>MagicBoard</strong></a>, which connected a <a href="http://boostedboards.com/">BoostedBoard</a> with a <a href="">Myo</a> gesture controlled armband. 
+                        This allowed the user to control the speed of the board by rotating his or her arm.
+                    </li>
+                    <li>
+                        My team and I created <a href="http://letsg.it/"><strong>LetsGit</strong></a>, a cloud-based git client, at <a href="http://hackgeny.com/">HackGenY</a>.
+                        It allows programmers to work on projects without downloading git software. This is useful for situations in which one does not have admin access to a computer.
+                        It also helps designers collaborate with programmers, as they can directly modify a project's files without having to learn git.
+                    </li>
+                    <li>
+                        My team and I created <a href="http://challengepost.com/software/airduino"><strong>Airduino</strong></a> at <a href="http://mhacks.org/">MHacks V</a>.
+                        It allows students to change variables in Arduino software, allowing them to get interested in hardware despite not knowing how to code.
+                    </li>
+                    <li>
+                        I am currently working with a peer on <a href="http://jgrader.com"><strong>jGrader</strong></a>, a tool to help AP Computer Science teachers easily collect and grade homework.
+                    </li>
+                    <li>
+                        I created a <a href="https://github.com/EthanSargent/NeuralNetwork"><strong>Neural Network</strong></a> with two peers that was able to recognize handwritten digits with 98% accuracy.
+                    </li>
+                    <li>
+                        In around the eighth to tenth grades I was on the developer team for the <a href="http://canarymod.net/" rel="nofollow"><strong>CanaryMod</strong></a> project, a server mod for <a href="https://minecraft.net/" rel="nofollow">Minecraft</a>.
+                    </li>
+                    <li>
+                        I work on small projects all the time, some of which can be found on my <a href="https://github.com/gregthegeek">Github</a>.
+                    </li>
+                </ul>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents" id="citizen">
+                <h2>Citizen</h2>
+                <ul>
+                    <li>
+                        As part of my involvement with my <a href="http://katonahbsa.com/" rel="nofollow"><strong>Boy Scout troop</strong></a>, I regularly participate in various community service activities.
+                        I am also working on digitally transcribing and mapping two cemeteries in my hometown as part of my Eagle Scout project.
+                        I am working with the <a href="http://friendsofbedfordburyinggrounds.org/" rel="nofollow">Friends of Bedford Burying Grounds</a>.
+                    </li>
+                    <li>
+                        When I am not participating in <span class="link-athlete self-link">athletics</span>, I volunteer weekly at the <a href="http://www.bedfordfreelibrary.org/" rel="nofollow">Bedford Free Library</a>, hosting an hour and a half long session known as <strong>&ldquo;Gadgets with Greg&rdquo;</strong>.
+                        There, I help local community members with any issues they are having with their technology.
+                        I have been doing this since the seventh grade.
+                    </li>
+                    <li>
+                        In the summer of 2012, I spent a week repairing a roof in the Appalachia region with the <strong>Bedford Neighbors United</strong>.
+                    </li>
+                </ul>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents" id="leader">
+                <h2>Leader</h2>
+                <ul>
+                    <li>
+                        I founded the <a href="http://www.byramhills.org/HighSchool.cfm?subpage=1177" rel="nofollow"><strong>Tech Club</strong></a> at my high school my sophomore year in order to teach programming languages and collaborate on projects.
+                        We hold one hour meetings after school twice every week.
+                        I engaged the club in the <a href="http://acsl.org/" rel="nofollow">American Computer Science League</a> competition this past year.
+                    </li>
+                    <li>
+                        I am currently on the junior staff of my <a href="http://katonahbsa.com/" rel="nofollow"><strong>Boy Scout troop</strong></a>.
+                        I served as a patrol leader for two years, leading a group of eight to twelve kids in competitions, on campouts, and at weekly meetings.
+                        I am currently pursuing the rank of Eagle Scout.
+                    </li>
+                </ul>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents" id="athlete">
+                <h2>Athlete</h2>
+                <ul>
+                    <li>
+                        I have ran on my school's fall <strong>cross country</strong> team since freshman year and am currently in my final high school season.
+                    </li>
+                    <li>
+                        I have also ran on my school's <strong>spring track</strong> team since freshman year, and plan on continuing this spring.
+                        I usually run 400s and 800s, but my sophomore year I participated in the pentathlon.
+                        I have qualified for and ran at the class B championship meet every year.
+                        This past spring, I also qualified for and ran at the county championship meet in a 4 x 400 relay.
+                    </li>
+                </ul>
+            </div>
+            <span class="line"></span>
+
+            <div class="contents">
+                <h2>Contact</h2>
+                <div class="buttons">
+                    <a class="button" href="moc.nilracyrogerg@gerg:otliam" id="email"><span class="fa fa-2x fa-envelope" title="Email"></span><span>moc.nilracyrogerg@gerg</span></a>
+                    <a class="button" href="31235234191+:let" id="phone"><span class="fa fa-2x fa-phone" title="Phone"></span><span>3123-523 )419( 1</span></a>
+                    <a class="button" href="nilraCRgerG/moc.koobecaf.www//:sptth" id="fb"><span class="fa fa-2x fa-facebook" title="Facebook"></span><span>nilraC gerG</span></a>
+                    <a class="button" href="nilracrgerg/moc.rettiwt//:sptth" id="twitter"><span class="fa fa-2x fa-twitter" title="Twitter"></span><span>nilraCRgerG@</span></a>
+                    <a class="button" href="/keegehtgerg/moc.buhtig//:sptth" id="github"><span class="fa fa-2x fa-github" title="Github"></span><span>keegehtgerg</span></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
